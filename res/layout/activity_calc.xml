@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CalcActivity" >
+
+    <EditText
+        android:id="@+id/billTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/bill_total_hint" />
+
+    <Button
+        android:id="@+id/fifteen_percent_btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="onFifteen"
+        android:text="@string/fifteen_percent" />
+
+    <Button
+        android:id="@+id/twenty_percent_btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fifteen_percent_btn"
+        android:layout_alignBottom="@+id/fifteen_percent_btn"
+        android:layout_toRightOf="@+id/fifteen_percent_btn"
+        android:onClick="onTwenty"
+        android:text="@string/twenty_percent_btn" />
+
+    <Button
+        android:id="@+id/ten_percent_btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fifteen_percent_btn"
+        android:layout_alignBottom="@+id/fifteen_percent_btn"
+        android:layout_toLeftOf="@+id/fifteen_percent_btn"
+        android:onClick="onTen"
+        android:text="@string/ten_percent" />
+
+    <TextView
+        android:id="@+id/totalLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/total"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/totalLabelView"
+        android:layout_alignBottom="@+id/totalLabelView"
+        android:layout_alignLeft="@+id/tvTip"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tipLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/totalLabelView"
+        android:layout_alignRight="@+id/totalLabelView"
+        android:layout_marginBottom="14dp"
+        android:text="@string/tip"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipLabelView"
+        android:layout_alignBottom="@+id/tipLabelView"
+        android:layout_toRightOf="@+id/tipLabelView"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/errorLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/billTotal"
+        android:layout_centerHorizontal="true"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/selected_percent_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTip"
+        android:layout_alignBottom="@+id/tvTip"
+        android:layout_toRightOf="@+id/tvTip"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
